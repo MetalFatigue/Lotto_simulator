@@ -11,10 +11,12 @@ while i < 6:
             break
         except ValueError:
             print("It's not a number")
+    if number in user_selection:
+        print("You can't select the number again")
 
-    if number >= 1 and number <= 49:
+    elif number >= 1 and number <= 49:
         user_selection.append(number)
-        i+= 1
+        i += 1
     else:
         print("You choose wrong number")
 
