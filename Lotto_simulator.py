@@ -12,9 +12,11 @@ while i < 6:
         except ValueError:
             print("It's not a number")
 
-    user_selection.append(number)
-    i += 1
-
+    if number >= 1 and number <= 49:
+        user_selection.append(number)
+        i+= 1
+    else:
+        print("You choose wrong number")
 
 user_selection.sort()
 print(user_selection)
@@ -22,6 +24,7 @@ print(user_selection)
 draw = []
 while len(draw) < 6:
     draw.append(random.randint(1, 49))
+    draw.sort()
 print(draw)
 
 hit = 0
